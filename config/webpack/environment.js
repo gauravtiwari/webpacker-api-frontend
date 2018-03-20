@@ -3,9 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 const { resolve } = require('path')
 
-console.log(config)
-
-environment.plugins.append('html',     
+environment.plugins.append('html',
 new HtmlWebpackPlugin({
   inject: 'body',
   alwaysWriteToDisk: true,

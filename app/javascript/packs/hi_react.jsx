@@ -8,7 +8,7 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import "babel-polyfill";
 
-class Hello extends Component {
+class Hi extends Component {
   static defaultProps = {
     name: "David"
   };
@@ -22,13 +22,13 @@ class Hello extends Component {
   };
 
   async componentWillMount() {
-    const response = await axios.get("/api/pages");
+    const response = await axios.get("/api/pages/1");
     this.setState({ name: response.data.name });
   }
 
-  render = () => <div>Hello {this.state.name}!</div>;
+  render = () => <div>Hi {this.state.name}!</div>;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<Hello name="React" />, document.getElementById("app"));
+  ReactDOM.render(<Hi name="React" />, document.getElementById("hi"));
 });
